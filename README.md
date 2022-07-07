@@ -5,13 +5,8 @@ A minimalistic server to be used with Plesk DNS. The goal is to have an external
 
 ## Setup the Server
 
-* Build this project. For example with
-
-```bash
-dotnet publish -c Release -r linux-x64 --self-contained false
-```
-
-* Install dotnet 6. If built in advance with above command, only the runtime is required on the server (or if self-contained is set true, not even the runtime must be installed but this increases the executables size).
+* Build this project (example: `dotnet publish -c Release -r linux-x64 --self-contained false`) or grab a [release](https://github.com/delasource/PleskDynDnsServer/releases)
+* Install dotnet 6 runtime
 * Create a service, for example like this: `nano /etc/systemd/system/dyndnsserver.service`
 ```ini
 [Unit]
